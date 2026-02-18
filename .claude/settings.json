@@ -1,0 +1,22 @@
+{
+  "project": {
+    "name": "delano",
+    "version": "0.1.0",
+    "description": "Modern Spec Driven AI management tool"
+  },
+  "paths": {
+    "commands": ".claude/commands",
+    "agents": ".claude/agents",
+    "skills": ".claude/skills",
+    "rules": ".claude/rules",
+    "logs": ".claude/logs",
+    "prds": ".project/prds",
+    "epics": ".project/epics",
+    "context": ".project/context"
+  },
+  "logging": {
+    "enabled": true,
+    "file": ".claude/logs/changes.jsonl",
+    "events": ["file_create", "file_modify", "file_delete", "command_run"]
+  }
+}

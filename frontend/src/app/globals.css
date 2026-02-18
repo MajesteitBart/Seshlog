@@ -1,0 +1,228 @@
+/* Seshlog Brand Typography - Noto Sans loaded via Next.js font optimization */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes vibrate {
+  0% {
+    transform: translate(0);
+  }
+
+  20% {
+    transform: translate(-2px, 2px);
+  }
+
+  40% {
+    transform: translate(-2px, -2px);
+  }
+
+  60% {
+    transform: translate(2px, 2px);
+  }
+
+  80% {
+    transform: translate(2px, -2px);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+
+.animate-vibrate {
+  animation: vibrate 0.3s linear;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.4s ease-out;
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.5s ease-out forwards;
+}
+
+.delay-75 {
+  animation-delay: 75ms;
+}
+
+.delay-100 {
+  animation-delay: 100ms;
+}
+
+.delay-150 {
+  animation-delay: 150ms;
+}
+
+@layer base {
+  /* Seshlog Brand Colors - Light Mode */
+  :root {
+    --background: 40 23% 97%;      /* #F9F8F6 - warm off-white */
+    --foreground: 45 10% 10%;      /* #1A1917 - warm dark */
+    --card: 0 0% 100%;             /* #FFFFFF */
+    --card-foreground: 45 10% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 45 10% 10%;
+    --primary: 38 92% 50%;         /* #F59E0B - Amber 500 */
+    --primary-foreground: 45 10% 10%;
+    --secondary: 40 11% 93%;       /* #F0EFED */
+    --secondary-foreground: 45 10% 10%;
+    --muted: 40 11% 93%;           /* #F0EFED */
+    --muted-foreground: 42 7% 43%; /* #737069 */
+    --accent: 32 95% 44%;          /* #D97706 - Amber 600 */
+    --accent-foreground: 45 10% 10%;
+    --destructive: 0 84% 60%;      /* #EF4444 */
+    --destructive-foreground: 0 0% 98%;
+    --border: 45 10% 89%;          /* #E5E4E1 */
+    --input: 45 10% 89%;
+    --ring: 38 92% 50%;            /* Match primary */
+    --radius: 0.625rem;            /* 10px from brandbook */
+    /* Status colors */
+    --recording: 0 84% 60%;        /* #EF4444 - Red */
+    --processing: 263 70% 50%;     /* #8B5CF6 - Purple */
+    --success: 160 84% 39%;        /* #10B981 - Green */
+    /* Chart colors - amber themed */
+    --chart-1: 38 92% 50%;
+    --chart-2: 32 95% 44%;
+    --chart-3: 45 93% 56%;
+    --chart-4: 25 95% 53%;
+    --chart-5: 20 90% 48%;
+  }
+
+  /* Seshlog Brand Colors - Dark Mode */
+  .dark {
+    --background: 240 20% 5%;      /* #0A0A0F - deep dark */
+    --foreground: 40 11% 93%;      /* #F0EFED */
+    --card: 240 12% 8%;            /* #131318 */
+    --card-foreground: 40 11% 93%;
+    --popover: 240 12% 8%;
+    --popover-foreground: 40 11% 93%;
+    --primary: 45 93% 56%;         /* #FBBF24 - Amber 400 (brighter for dark) */
+    --primary-foreground: 45 10% 10%;
+    --secondary: 240 12% 13%;      /* #1E1E24 */
+    --secondary-foreground: 40 11% 93%;
+    --muted: 240 12% 13%;          /* #1E1E24 */
+    --muted-foreground: 45 5% 53%; /* #8C8A84 */
+    --accent: 45 93% 56%;          /* Match primary in dark */
+    --accent-foreground: 45 10% 10%;
+    --destructive: 0 63% 31%;      /* Darker red for dark mode */
+    --destructive-foreground: 40 11% 93%;
+    --border: 240 10% 18%;         /* #2A2A32 */
+    --input: 240 10% 18%;
+    --ring: 45 93% 56%;
+    /* Status colors - same as light */
+    --recording: 0 84% 60%;
+    --processing: 263 70% 50%;
+    --success: 160 84% 39%;
+    /* Chart colors - amber themed for dark */
+    --chart-1: 45 93% 56%;
+    --chart-2: 38 92% 50%;
+    --chart-3: 32 95% 44%;
+    --chart-4: 25 95% 53%;
+    --chart-5: 20 90% 48%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  /* html, */
+  body {
+    @apply bg-background text-foreground;
+    overflow: hidden;
+    height: 100%;
+  }
+
+  /* Make the window draggable */
+  .titlebar {
+    -webkit-app-region: drag;
+    app-region: drag;
+  }
+
+  .no-drag {
+    -webkit-app-region: no-drag;
+    app-region: no-drag;
+  }
+
+  /* Custom scrollbar styles */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+    border-radius: 3px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #9ca3af;
+  }
+
+  /* Firefox scrollbar */
+  .custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #d1d5db transparent;
+  }
+
+  /* BlockNote Editor - Override fixed dimensions for responsive layout */
+  .bn-container {
+    width: 100% !important;
+    max-width: none !important;
+    overflow: visible !important;
+  }
+
+  .bn-editor {
+    width: 100% !important;
+    max-width: none !important;
+    overflow: visible !important;
+  }
+
+  /* Disable internal scrolling - let parent handle all scrolling */
+  .ProseMirror {
+    overflow: visible !important;
+  }
+
+  /* Ensure BlockNote content area is responsive */
+  .bn-block-outer {
+    max-width: 100% !important;
+  }
+
+  .bn-default-styles {
+    max-width: none !important;
+  }
+
+  /* Disable scrolling on any BlockNote wrapper elements */
+  [data-node-type] {
+    overflow: visible !important;
+  }
+}

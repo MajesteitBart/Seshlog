@@ -1,0 +1,1468 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seshlog Brand Book</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&display=swap"
+        rel="stylesheet">
+    <style>
+        /*  
+        ================================================================
+        FONT IMPORTS
+        ================================================================ 
+        */
+
+        .space-grotesk-300 {
+            font-family: "Space Grotesk", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        .space-grotesk-400 {
+            font-family: "Space Grotesk", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .space-grotesk-500 {
+            font-family: "Space Grotesk", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        .space-grotesk-600 {
+            font-family: "Space Grotesk", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 600;
+            font-style: normal;
+        }
+
+        .space-grotesk-700 {
+            font-family: "Space Grotesk", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        .poppins-thin {
+            font-family: "Poppins", sans-serif;
+            font-weight: 100;
+            font-style: normal;
+        }
+
+        .poppins-extralight {
+            font-family: "Poppins", sans-serif;
+            font-weight: 200;
+            font-style: normal;
+        }
+
+        .poppins-light {
+            font-family: "Poppins", sans-serif;
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        .poppins-regular {
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .poppins-medium {
+            font-family: "Poppins", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        .poppins-semibold {
+            font-family: "Poppins", sans-serif;
+            font-weight: 600;
+            font-style: normal;
+        }
+
+        .poppins-bold {
+            font-family: "Poppins", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        .poppins-extrabold {
+            font-family: "Poppins", sans-serif;
+            font-weight: 800;
+            font-style: normal;
+        }
+
+        .poppins-black {
+            font-family: "Poppins", sans-serif;
+            font-weight: 900;
+            font-style: normal;
+        }
+
+        .poppins-thin-italic {
+            font-family: "Poppins", sans-serif;
+            font-weight: 100;
+            font-style: italic;
+        }
+
+        .poppins-extralight-italic {
+            font-family: "Poppins", sans-serif;
+            font-weight: 200;
+            font-style: italic;
+        }
+
+        .poppins-light-italic {
+            font-family: "Poppins", sans-serif;
+            font-weight: 300;
+            font-style: italic;
+        }
+
+        .poppins-regular-italic {
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        .poppins-medium-italic {
+            font-family: "Poppins", sans-serif;
+            font-weight: 500;
+            font-style: italic;
+        }
+
+        .poppins-semibold-italic {
+            font-family: "Poppins", sans-serif;
+            font-weight: 600;
+            font-style: italic;
+        }
+
+        .poppins-bold-italic {
+            font-family: "Poppins", sans-serif;
+            font-weight: 700;
+            font-style: italic;
+        }
+
+        .poppins-extrabold-italic {
+            font-family: "Poppins", sans-serif;
+            font-weight: 800;
+            font-style: italic;
+        }
+
+        .poppins-black-italic {
+            font-family: "Poppins", sans-serif;
+            font-weight: 900;
+            font-style: italic;
+        }
+
+
+        /* ================================================================
+       CSS VARIABLES - Geometric Surrealism / Modern Retro
+       ================================================================ */
+        :root {
+            /* Cosmic Palette */
+            --void: #0D0B1E;
+            --nebula-deep: #1A1532;
+            --nebula-mid: #2D2456;
+            --indigo: #4C3F91;
+            --violet: #6B5AAD;
+
+            /* Golden Monuments */
+            --amber: #F59E0B;
+            --amber-bright: #FBBF24;
+            --amber-deep: #D97706;
+            --gold: #EAB308;
+
+            /* Neutrals */
+            --sand: #F5F0E6;
+            --sand-dark: #E8E0D0;
+            --stone: #9CA3AF;
+            --obsidian: #1F2937;
+
+            /* Functional */
+            --recording: #EF4444;
+            --processing: #8B5CF6;
+            --success: #10B981;
+
+            /* Typography */
+            /* --font-display: 'Space Grotesk', sans-serif;
+            --font-body: 'Poppins', Georgia, serif; */
+            --font-display: 'Space Grotesk', sans-serif;
+            --font-body: 'Poppins', sans-serif;
+
+            /* Spacing */
+            --radius: 0.5rem;
+
+            /* Light mode defaults */
+            --bg-primary: var(--sand);
+            --bg-secondary: #FFFFFF;
+            --text-primary: var(--obsidian);
+            --text-secondary: #4B5563;
+            --border-color: var(--sand-dark);
+        }
+
+        .dark {
+            --bg-primary: var(--void);
+            --bg-secondary: var(--nebula-deep);
+            --text-primary: var(--sand);
+            --text-secondary: var(--stone);
+            --border-color: var(--nebula-mid);
+        }
+
+        /* ================================================================
+       BASE STYLES
+       ================================================================ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        /* Grain overlay for tactile authenticity */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            opacity: 0.03;
+            z-index: 1000;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+        }
+
+        .dark body::before {
+            opacity: 0.05;
+        }
+
+        /* ================================================================
+       LAYOUT
+       ================================================================ */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section {
+            padding: 5rem 0;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .section-label {
+            font-family: var(--font-display);
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--amber);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+
+        .section-intro {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            max-width: 640px;
+            margin-bottom: 3rem;
+        }
+
+        /* ================================================================
+       HEADER
+       ================================================================ */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border-color);
+            backdrop-filter: blur(12px);
+        }
+
+        .dark .header {
+            background: rgba(13, 11, 30, 0.9);
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 4rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            color: var(--text-primary);
+        }
+
+        .logo-mark {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, var(--amber) 0%, var(--amber-deep) 100%);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--void);
+        }
+
+        .logo-text {
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 1.125rem;
+        }
+
+        .nav {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav a {
+            font-family: var(--font-display);
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .nav a:hover {
+            color: var(--amber);
+        }
+
+        .theme-toggle {
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            padding: 0.5rem 0.75rem;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.2s;
+        }
+
+        .theme-toggle:hover {
+            border-color: var(--amber);
+        }
+
+        /* ================================================================
+       HERO - COSMIC BACKDROP
+       ================================================================ */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(180deg, var(--void) 0%, var(--nebula-deep) 50%, var(--nebula-mid) 100%);
+            color: var(--sand);
+        }
+
+        /* Star field */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image:
+                radial-gradient(2px 2px at 20px 30px, var(--amber-bright), transparent),
+                radial-gradient(2px 2px at 40px 70px, var(--sand), transparent),
+                radial-gradient(1px 1px at 90px 40px, var(--amber), transparent),
+                radial-gradient(2px 2px at 160px 120px, var(--sand), transparent),
+                radial-gradient(1px 1px at 230px 80px, var(--amber-bright), transparent),
+                radial-gradient(2px 2px at 300px 150px, var(--sand), transparent),
+                radial-gradient(1px 1px at 370px 50px, var(--amber), transparent),
+                radial-gradient(2px 2px at 450px 180px, var(--sand), transparent),
+                radial-gradient(1px 1px at 520px 90px, var(--amber-bright), transparent),
+                radial-gradient(2px 2px at 600px 140px, var(--sand), transparent),
+                radial-gradient(1px 1px at 680px 60px, var(--amber), transparent),
+                radial-gradient(2px 2px at 750px 200px, var(--sand), transparent),
+                radial-gradient(1px 1px at 820px 110px, var(--amber-bright), transparent),
+                radial-gradient(2px 2px at 900px 170px, var(--sand), transparent),
+                radial-gradient(1px 1px at 980px 45px, var(--amber), transparent),
+                radial-gradient(2px 2px at 1050px 190px, var(--sand), transparent);
+            background-size: 1100px 220px;
+            animation: twinkle 8s ease-in-out infinite;
+            opacity: 0.6;
+        }
+
+        @keyframes twinkle {
+
+            0%,
+            100% {
+                opacity: 0.6;
+            }
+
+            50% {
+                opacity: 0.9;
+            }
+        }
+
+        /* Pyramid silhouette */
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 300px solid transparent;
+            border-right: 300px solid transparent;
+            border-bottom: 200px solid var(--nebula-deep);
+            opacity: 0.4;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            max-width: 800px;
+            padding: 2rem;
+        }
+
+        .hero-logo {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 2rem;
+            background: linear-gradient(135deg, var(--amber) 0%, var(--amber-deep) 100%);
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 4rem;
+            color: var(--void);
+            box-shadow:
+                0 0 60px rgba(245, 158, 11, 0.4),
+                0 0 120px rgba(245, 158, 11, 0.2);
+        }
+
+        .hero h1 {
+            font-family: var(--font-display);
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--sand) 0%, var(--amber-bright) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-tagline {
+            font-family: var(--font-body);
+            font-size: 1.5rem;
+            /* font-style: italic; */
+            color: var(--amber-bright);
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-description {
+            font-size: 1.125rem;
+            color: var(--stone);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            line-height: 1.8;
+        }
+
+        .hero-meta {
+            font-family: var(--font-display);
+            font-size: 0.875rem;
+            color: var(--violet);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+        }
+
+        /* ================================================================
+       VISION SECTION
+       ================================================================ */
+        .vision {
+            background: var(--bg-secondary);
+            position: relative;
+        }
+
+        .dark .vision {
+            background: var(--nebula-deep);
+        }
+
+        .vision-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .vision-text h2 {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .vision-text p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .vision-graphic {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .pyramid-illustration {
+            width: 300px;
+            height: 250px;
+            position: relative;
+        }
+
+        .pyramid-illustration::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 150px solid transparent;
+            border-right: 150px solid transparent;
+            border-bottom: 180px solid var(--amber);
+            filter: drop-shadow(0 0 30px rgba(245, 158, 11, 0.5));
+        }
+
+        .pyramid-illustration::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 150px solid transparent;
+            border-right: 0 solid transparent;
+            border-bottom: 180px solid var(--amber-deep);
+        }
+
+        /* ================================================================
+       PILLARS
+       ================================================================ */
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .pillar-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            padding: 2rem;
+            transition: all 0.3s;
+        }
+
+        .dark .pillar-card {
+            background: var(--nebula-deep);
+        }
+
+        .pillar-card:hover {
+            border-color: var(--amber);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(245, 158, 11, 0.15);
+        }
+
+        .pillar-icon {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, var(--indigo) 0%, var(--violet) 100%);
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .pillar-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .pillar-card p {
+            font-size: 0.9375rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* ================================================================
+       COLORS
+       ================================================================ */
+        .color-section {
+            margin-bottom: 3rem;
+        }
+
+        .color-section h3 {
+            font-family: var(--font-display);
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+        }
+
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+        }
+
+        .color-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            overflow: hidden;
+        }
+
+        .color-swatch {
+            height: 100px;
+            position: relative;
+        }
+
+        .color-info {
+            padding: 1rem;
+        }
+
+        .color-name {
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 0.875rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .color-hex {
+            font-family: var(--font-display);
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* ================================================================
+       TYPOGRAPHY
+       ================================================================ */
+        .type-specimen {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            padding: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .dark .type-specimen {
+            background: var(--nebula-deep);
+        }
+
+        .type-display {
+            font-family: var(--font-display);
+        }
+
+        .type-body {
+            font-family: var(--font-body);
+        }
+
+        .type-label {
+            font-family: var(--font-display);
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--amber);
+            margin-bottom: 1rem;
+        }
+
+        .type-sample-large {
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+        }
+
+        .type-sample-medium {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+        }
+
+        .type-sample-body {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            max-width: 600px;
+        }
+
+        .type-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        /* ================================================================
+       COMPONENTS
+       ================================================================ */
+        .component-showcase {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .dark .component-showcase {
+            background: var(--nebula-deep);
+        }
+
+        .component-label {
+            font-family: var(--font-display);
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        /* Buttons */
+        .button-row {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn {
+            font-family: var(--font-display);
+            font-size: 0.875rem;
+            font-weight: 600;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius);
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--amber) 0%, var(--amber-deep) 100%);
+            color: var(--void);
+        }
+
+        .btn-primary:hover {
+            box-shadow: 0 8px 24px rgba(245, 158, 11, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid var(--amber);
+            color: var(--amber);
+        }
+
+        .btn-secondary:hover {
+            background: var(--amber);
+            color: var(--void);
+        }
+
+        .btn-cosmic {
+            background: linear-gradient(135deg, var(--indigo) 0%, var(--violet) 100%);
+            color: var(--sand);
+        }
+
+        .btn-cosmic:hover {
+            box-shadow: 0 8px 24px rgba(107, 90, 173, 0.4);
+        }
+
+        /* Recording indicator */
+        .recording-indicator {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: var(--void);
+            padding: 1rem 1.5rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--nebula-mid);
+        }
+
+        .recording-dot {
+            width: 12px;
+            height: 12px;
+            background: var(--recording);
+            border-radius: 50%;
+            animation: pulse-recording 1.5s ease-in-out infinite;
+            box-shadow: 0 0 12px var(--recording);
+        }
+
+        @keyframes pulse-recording {
+
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.6;
+                transform: scale(0.9);
+            }
+        }
+
+        .recording-text {
+            font-family: var(--font-display);
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--sand);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .recording-time {
+            font-family: var(--font-display);
+            font-size: 0.875rem;
+            color: var(--amber-bright);
+            font-variant-numeric: tabular-nums;
+        }
+
+        /* Audio visualizer */
+        .visualizer-container {
+            background: linear-gradient(135deg, var(--void) 0%, var(--nebula-deep) 100%);
+            padding: 2rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--nebula-mid);
+        }
+
+        .visualizer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            height: 80px;
+        }
+
+        .visualizer-bar {
+            width: 4px;
+            background: linear-gradient(180deg, var(--amber-bright) 0%, var(--amber-deep) 100%);
+            border-radius: 2px;
+            animation: visualize 0.8s ease-in-out infinite;
+        }
+
+        .visualizer-bar:nth-child(1) {
+            height: 20px;
+            animation-delay: 0s;
+        }
+
+        .visualizer-bar:nth-child(2) {
+            height: 35px;
+            animation-delay: 0.1s;
+        }
+
+        .visualizer-bar:nth-child(3) {
+            height: 55px;
+            animation-delay: 0.2s;
+        }
+
+        .visualizer-bar:nth-child(4) {
+            height: 70px;
+            animation-delay: 0.15s;
+        }
+
+        .visualizer-bar:nth-child(5) {
+            height: 45px;
+            animation-delay: 0.25s;
+        }
+
+        .visualizer-bar:nth-child(6) {
+            height: 60px;
+            animation-delay: 0.1s;
+        }
+
+        .visualizer-bar:nth-child(7) {
+            height: 30px;
+            animation-delay: 0.3s;
+        }
+
+        .visualizer-bar:nth-child(8) {
+            height: 50px;
+            animation-delay: 0.05s;
+        }
+
+        .visualizer-bar:nth-child(9) {
+            height: 25px;
+            animation-delay: 0.2s;
+        }
+
+        .visualizer-bar:nth-child(10) {
+            height: 40px;
+            animation-delay: 0.15s;
+        }
+
+        @keyframes visualize {
+
+            0%,
+            100% {
+                transform: scaleY(1);
+            }
+
+            50% {
+                transform: scaleY(0.5);
+            }
+        }
+
+        /* Transcript card */
+        .transcript-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            overflow: hidden;
+        }
+
+        .dark .transcript-card {
+            background: var(--nebula-deep);
+        }
+
+        .transcript-header {
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .transcript-title {
+            font-family: var(--font-display);
+            font-weight: 600;
+        }
+
+        .transcript-badge {
+            font-family: var(--font-display);
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 0.25rem 0.75rem;
+            border-radius: 999px;
+            background: linear-gradient(135deg, var(--amber) 0%, var(--amber-deep) 100%);
+            color: var(--void);
+        }
+
+        .transcript-body {
+            padding: 1.5rem;
+        }
+
+        .transcript-entry {
+            margin-bottom: 1.5rem;
+            padding-left: 1rem;
+            border-left: 2px solid var(--indigo);
+        }
+
+        .transcript-entry:last-child {
+            margin-bottom: 0;
+        }
+
+        .transcript-speaker {
+            font-family: var(--font-display);
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--amber);
+            margin-bottom: 0.25rem;
+        }
+
+        .transcript-timestamp {
+            font-family: var(--font-display);
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            margin-left: 0.5rem;
+            font-weight: 400;
+        }
+
+        .transcript-text {
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        /* ================================================================
+       FOOTER
+       ================================================================ */
+        .footer {
+            background: var(--void);
+            color: var(--sand);
+            padding: 4rem 0 2rem;
+            text-align: center;
+        }
+
+        .footer-tagline {
+            font-family: var(--font-body);
+            font-size: 1.5rem;
+            font-style: italic;
+            color: var(--amber-bright);
+            margin-bottom: 2rem;
+        }
+
+        .footer-meta {
+            font-family: var(--font-display);
+            font-size: 0.75rem;
+            color: var(--stone);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+        }
+
+        /* ================================================================
+       RESPONSIVE
+       ================================================================ */
+        @media (max-width: 768px) {
+            .nav {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-tagline {
+                font-size: 1.125rem;
+            }
+
+            .vision-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pillars-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .type-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <div class="logo-mark">
+                    <svg width="450" height="450" viewBox="0 0 450 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="450" height="450"/>
+                        <path d="M223.798 8.71411L220.85 8.91065L220.81 25.499C220.771 34.6187 220.614 42.4019 220.496 42.7949C220.299 43.306 219.867 42.7556 218.884 40.7116C215.111 33.1643 205.991 25.9314 197.264 23.6122C191.329 22.0398 180.558 22.5902 179.182 24.5556C178.003 26.2459 178.907 30.2947 180.479 30.3733C180.833 30.3733 184.253 30.4126 188.027 30.4519C194.513 30.5306 195.063 30.6092 197.382 31.5526C203.436 34.147 208.782 38.6675 212.202 44.2101C213.853 46.9224 216.604 53.7621 216.211 54.1945C216.133 54.2732 215.622 53.9194 215.111 53.4084C211.376 49.7526 203.907 45.6645 199.112 44.6818C193.058 43.4239 186.336 44.1708 180.715 46.6472C176.588 48.4947 171.36 52.4256 168.805 55.649C166.485 58.5578 167.586 61.5846 171.085 62.0563C172.618 62.2529 172.736 62.2136 176.195 58.8723C178.907 56.2779 180.44 55.1379 182.641 54.1159C186.494 52.347 188.223 51.9932 192.94 51.9539C197.618 51.9539 201.117 52.7794 204.419 54.7449C207.603 56.6317 215.975 65.1224 215.307 65.7907C215.228 65.9086 213.656 65.6727 211.887 65.2403C203.829 63.3142 194.159 65.9086 187.869 71.6477C184.882 74.3993 182.759 77.4261 181.698 80.5315C180.715 83.4011 180.755 83.6369 182.091 85.0127C182.956 85.8775 183.624 86.1527 184.764 86.1527C186.769 86.1527 187.909 85.2879 188.42 83.4011C188.813 81.9466 191.604 78.173 193.373 76.6792C194.945 75.382 198.326 73.5345 200.684 72.7483C202.768 72.0408 203.75 71.9622 206.895 72.1194C211.573 72.3946 214.678 73.4559 218.57 76.0503C221.479 77.9764 221.518 78.055 221.321 79.4309C221.203 80.217 220.221 86.8602 219.12 94.1717C218.059 101.483 216.997 107.655 216.801 107.851C216.604 108.048 215.228 108.362 213.774 108.598C200.92 110.406 186.769 117.836 179.497 126.602C177.138 129.432 172.146 139.023 172.382 140.281C172.5 140.949 174.504 140.989 230.48 141.107C269.75 141.185 288.579 141.342 288.893 141.618C289.758 142.325 295.537 151.091 297.699 154.943C298.839 156.987 301.197 161.075 302.927 163.984C307.172 171.139 321.48 198.694 325.215 206.831C326.158 208.875 327.966 212.845 329.264 215.676C332.959 223.773 334.728 228.412 337.951 238.475C342.904 254.08 343.926 259.505 345.655 279.592C345.891 282.068 346.049 292.564 346.049 302.863V321.613H340.034H334.02L331.976 325.583C330.836 327.785 329.971 329.671 330.089 329.75C330.168 329.829 335.435 329.907 341.764 329.868C350.373 329.868 353.36 329.711 353.596 329.357C354.028 328.649 353.989 290.677 353.517 281.439C352.967 271.023 352.259 265.519 350.137 254.867C347.739 242.995 344.712 233.129 340.074 221.965C338.776 218.938 337.204 215.047 336.536 213.317C334.688 208.639 318.611 176.76 315.152 170.863C313.501 168.033 311.535 164.495 310.828 163.002C310.12 161.469 308.469 158.481 307.172 156.319C305.875 154.196 304.892 152.349 305.01 152.231C305.442 151.799 314.995 162.019 318.572 166.736C327.573 178.686 332.919 187.412 337.008 197.043C338.894 201.367 339.798 202.507 341.567 202.507C343.061 202.507 345.302 201.603 346.049 200.738C347.306 199.244 344.909 192.876 340.074 185.015C332.605 172.75 331.819 171.571 326.748 165.203C323.682 161.351 315.112 152.034 312.125 149.283C308.233 145.706 305.167 143.19 302.14 141.067C300.332 139.809 298.878 138.669 298.878 138.512C298.878 138.355 299.861 137.805 301.079 137.294C306.111 135.132 307.919 132.773 308.233 127.977C308.43 124.872 307.762 123.103 305.56 120.862C301.629 116.853 295.969 116.971 291.763 121.138C289.719 123.182 289.208 124.046 287.675 128.488C287.4 129.353 286.81 129.078 284.255 126.837C277.966 121.295 265.898 114.494 257.603 111.743C252.533 110.053 240.976 107.773 236.18 107.497C234.018 107.38 232.053 107.104 231.817 106.908C231.581 106.751 231.267 105.493 231.109 104.117C230.755 100.815 229.026 88.354 228.318 83.9514C227.414 78.3302 227.454 77.7799 229.222 76.6006C239.089 70.1146 249.034 70.547 256.188 77.7799C257.603 79.195 259.294 81.4356 259.962 82.6935C261.456 85.5237 262.596 86.3492 264.522 86.0348C266.645 85.681 267.431 84.7769 267.431 82.6542C267.431 79.195 264.05 73.8097 259.923 70.665C256.817 68.3064 251.589 65.7907 248.327 65.1224C244.828 64.3755 240.897 64.3755 237.006 65.1224C235.276 65.4369 233.822 65.6334 233.704 65.5548C233.389 65.2403 237.438 60.4053 239.954 58.0861C244.199 54.1552 250.056 51.9539 256.188 51.9539C262.949 51.9539 268.453 54.3518 273.209 59.2654C275.804 61.9777 276.118 62.1742 277.651 62.1742C279.695 62.1742 281.582 60.5233 281.582 58.7151C281.582 54.4697 269.986 46.0576 261.967 44.4459C258.114 43.699 250.685 44.1708 246.754 45.4286C242.981 46.6472 237.988 49.5561 234.962 52.347C233.743 53.4477 232.682 54.2732 232.603 54.1945C232.289 53.8801 233.704 49.6347 235.001 47.0796C238.696 39.8861 244.671 34.3042 251.786 31.3954C253.673 30.6092 254.577 30.5306 261.023 30.5306C267.667 30.5306 268.217 30.4913 269.278 29.7051C270.143 29.0761 270.418 28.4865 270.497 27.2286C270.615 25.8528 270.418 25.4204 269.475 24.477C268.099 23.0619 265.74 22.6688 259.176 22.7081C253.869 22.7081 250.253 23.5729 245.496 25.9707C239.403 29.0368 235.433 32.6139 231.227 38.7854C229.851 40.8295 228.593 42.5198 228.476 42.5198C228.358 42.5198 228.279 34.9725 228.279 25.7742C228.318 6.43419 228.829 8.36033 223.798 8.71411ZM240.229 115.477C252.729 117.01 262.478 120.705 273.524 128.056C279.381 131.948 280.363 132.812 279.616 133.323C279.066 133.716 192.744 133.795 186.965 133.402C185.59 133.323 184.489 133.088 184.489 132.852C184.489 132.655 186.336 130.65 188.616 128.449C192.154 124.99 193.294 124.125 196.95 122.199C202.06 119.565 205.441 118.268 210.433 117.05C220.574 114.494 228.751 114.101 240.229 115.477ZM300.568 126.326C301.236 127.191 301.276 127.624 301.001 128.685C300.686 129.707 300.057 130.336 297.895 131.633C294.672 133.599 293.768 133.756 293.768 132.341C293.768 130.886 295.261 127.348 296.441 126.13C297.777 124.715 299.428 124.793 300.568 126.326Z" fill="#0A0A0F"/>
+                        <path d="M182.641 147.75C171.438 147.868 170.377 147.946 170.18 148.575C169.748 149.99 168.805 157.656 168.569 161.626C168.215 167.168 167.704 170.038 166.643 172.2C166.131 173.183 164.245 176.996 162.397 180.691C157.287 190.872 156.973 192.09 158.977 193.545C159.528 193.977 161.1 194.724 162.476 195.196C165.62 196.336 165.935 196.807 165.306 199.166C164.481 202.311 164.677 203.647 166.21 205.101C167.586 206.359 167.586 206.438 166.996 207.381C165.896 209.072 166.367 210.723 168.372 212.138C170.338 213.514 170.18 212.963 169.944 219.095C169.866 221.022 169.984 221.572 170.849 222.673C172.578 224.952 174.19 225.463 179.968 225.621C186.218 225.817 194.945 225.11 198.994 224.127C203.711 222.908 209.371 219.882 213.538 216.226C215.543 214.536 217.39 213.12 217.665 213.12C218.255 213.12 220.653 215.558 220.653 216.147C220.653 217.012 216.329 221.257 213.499 223.223C210.157 225.542 206.462 227.429 204.615 227.861C203.907 228.019 203.239 228.333 203.121 228.608C202.807 229.473 206.738 243.27 208.507 247.594C209.843 250.739 213.577 255.456 216.25 257.264C218.216 258.64 223.876 260.684 225.763 260.684C227.768 260.684 228.043 261.038 228.358 263.75C228.672 266.777 228.279 267.406 226.235 267.092C221.4 266.384 217.705 264.89 213.302 261.785C208.231 258.247 204.851 254.277 202.728 249.324C201.549 246.612 201.392 246.572 197.775 247.555C195.928 248.105 195.495 248.341 195.495 249.049C195.495 250.346 197.932 255.967 199.387 258.09C201.274 260.802 205.44 265.126 208.153 267.17C212.398 270.354 220.181 273.42 225.291 273.931L228.318 274.246L228.436 277.351L228.554 280.457L225.881 280.26C215.739 279.474 202.414 272.084 196.321 263.829C193.53 260.095 191.368 256.282 190.228 253.137C189.795 251.8 189.127 250.582 188.773 250.346C188.38 250.11 187.437 250.15 186.061 250.425C182.641 251.132 182.681 251.093 183.899 254.827C186.415 262.532 188.97 266.581 195.338 273.106C199.348 277.194 203.239 279.946 208.978 282.737C213.459 284.859 220.299 286.825 225.213 287.296L228.318 287.611L228.436 290.48C228.515 292.682 228.436 293.389 228.004 293.547C227.139 293.861 218.491 292.642 215.228 291.738C211.455 290.677 201.785 285.96 198.601 283.641C197.225 282.619 194.277 280.221 192.036 278.255C189.795 276.329 187.869 274.875 187.712 274.993C187.594 275.15 187.869 276.172 188.38 277.312C188.852 278.413 190.031 281.321 191.014 283.719C192.586 287.572 193.019 288.318 194.709 289.734C198.876 293.232 204.143 295.787 212.595 298.342C217.469 299.836 220.692 300.386 224.82 300.386C227.375 300.386 228.082 300.504 228.279 301.015C228.593 301.841 228.593 303.885 228.24 305.496L228.004 306.794L224.427 306.558C219.906 306.243 210.393 304.239 207.17 302.902C205.834 302.352 203.632 301.29 202.256 300.504C199.701 299.089 198.443 299.011 198.915 300.268C199.033 300.661 200.134 302.391 201.352 304.121C202.571 305.85 204.3 308.405 205.244 309.82C209.607 316.424 221.085 328.728 227.925 334.074C233.35 338.319 243.177 344.137 251.314 347.872C255.599 349.876 261.967 351.999 262.36 351.567C262.517 351.409 266.959 342.722 272.266 332.227C277.533 321.731 282.171 312.611 282.486 311.982C282.84 311.314 284.098 308.72 285.277 306.204C288.697 298.853 288.893 298.657 292.824 299.639C294.043 299.954 294.554 300.268 294.554 300.779C294.554 301.173 293.335 303.963 291.841 306.99C289.326 312.061 289.168 312.533 289.758 313.083C290.662 313.869 321.598 329.082 322.267 329.082C323.289 329.082 333.43 306.912 335.003 301.173C336.732 294.922 337.007 286.274 335.632 280.889C334.374 276.054 331.19 270.629 327.495 266.934C323.249 262.768 318.532 260.291 309.137 257.304C305.206 256.046 303.713 255.731 303.32 256.046C303.044 256.242 302.455 257.697 301.983 259.23C299.192 268.625 292.51 279.277 284.844 286.668C278.712 292.564 273.052 296.809 272.108 296.22C271.676 295.984 271.637 290.127 272.069 289.576C272.226 289.341 273.877 287.965 275.725 286.55C280.206 283.051 286.063 276.88 288.775 272.831C292.863 266.62 297.974 255.299 297.03 254.356C296.598 253.923 292.47 252.823 291.213 252.823C290.466 252.823 290.19 253.176 289.601 254.867C288.343 258.64 285.277 265.205 283.547 267.76C281.031 271.573 274.663 278.531 272.698 279.671C272.226 279.946 272.148 279.277 272.148 276.015V272.084L274.31 269.686C277.258 266.502 279.695 262.65 281.975 257.618C284.962 250.936 284.962 250.818 280.992 250.15C278.162 249.678 277.494 249.953 276.825 251.918C275.803 255.102 272.895 260.291 272.148 260.291C271.951 260.291 271.715 257.579 271.676 254.277L271.558 248.302L270.182 247.634C269.435 247.28 267.784 246.848 266.566 246.73L264.286 246.454V283.994V321.535L263.421 321.731C262.045 322.006 236.534 321.77 236.023 321.456C235.708 321.259 235.59 305.811 235.59 260.213C235.59 226.682 235.512 199.166 235.433 199.087C235.355 198.969 234.293 198.773 233.075 198.615C228.829 198.026 225.96 194.881 226.982 191.894C227.375 190.754 228.358 189.928 229.262 189.928C229.458 189.928 230.402 190.714 231.266 191.658C232.17 192.601 233.35 193.505 233.9 193.663C235.197 193.977 238.853 192.876 240.111 191.776C241.526 190.518 244.789 184.897 246.243 181.123C247.383 178.332 247.54 177.467 247.54 174.008C247.58 170.706 247.422 169.802 246.715 168.505C244.317 163.945 240.072 162.137 236.18 163.945C233.35 165.282 232.21 166.815 230.716 171.453L229.891 174.008H227.611C226.196 174.008 225.213 173.812 225.016 173.497C224.859 173.222 224.505 171.532 224.23 169.763C223.169 162.687 221.832 159.307 218.766 156.005C213.577 150.462 207.917 148.104 198.837 147.75C196.675 147.671 189.402 147.671 182.641 147.75ZM195.888 157.027C197.5 157.577 200.33 158.56 202.138 159.228C204.851 160.25 206.266 160.486 210.393 160.761L215.346 161.036V162.805V164.574L209.45 164.535H203.554L199.426 162.923C190.346 159.385 185.668 159.228 178.868 162.294C177.177 163.041 175.566 163.552 175.251 163.434C174.426 163.12 174.033 160.486 174.701 159.857C175.644 158.992 179.182 157.302 181.776 156.516C185.354 155.415 191.8 155.651 195.888 157.027ZM192.115 167.326C193.412 167.679 195.731 168.466 197.343 169.094C200.212 170.234 200.409 170.274 207.406 170.274C211.337 170.274 214.796 170.431 215.071 170.628C215.425 170.824 215.543 171.571 215.464 172.672L215.346 174.401L207.484 174.598L199.623 174.794L196.753 176.288C192.665 178.411 189.206 179.236 185.825 178.843C184.332 178.686 180.597 178.411 177.531 178.293C173.404 178.096 171.91 177.9 171.91 177.546C171.91 176.799 175.055 172.711 177.335 170.51C180.833 167.129 186.572 165.91 192.115 167.326Z" fill="#0A0A0F"/>
+                        <path d="M96.2009 221.808C95.8864 222.319 96.3188 225.739 97.6553 233.168C98.3236 236.745 99.1098 241.148 99.4242 242.995C100.21 247.437 101.468 252.508 101.94 252.98C102.137 253.176 103.788 252.98 106.067 252.429C109.251 251.722 110.038 251.643 111.02 252.036C114.401 253.451 114.676 257.815 111.492 259.033C110.902 259.269 108.819 259.662 106.932 259.898C104.495 260.252 103.394 260.566 103.237 260.959C103.001 261.51 104.141 269.647 104.574 270.787C104.81 271.416 106.618 271.455 109.448 270.905C114.676 269.883 117.035 270.551 117.506 273.106C118.096 276.172 116.484 277.351 110.706 278.02C108.583 278.255 106.618 278.688 106.343 278.924C105.95 279.317 105.95 279.867 106.421 281.95C106.736 283.326 107.089 285.37 107.247 286.432C107.64 289.576 107.522 289.537 112.514 288.79C117.742 288.043 119 288.201 120.061 289.891C120.926 291.345 121.005 292.092 120.376 293.468C119.747 294.804 117.939 295.591 114.283 296.062C109.016 296.77 109.369 296.534 109.645 299.128C109.88 301.723 111.02 307.108 111.374 307.541C111.492 307.737 113.536 307.541 115.934 307.187C118.332 306.833 120.73 306.676 121.319 306.833C123.992 307.501 124.818 310.567 122.852 312.572C121.712 313.673 121.005 313.869 116.17 314.38C112.475 314.734 112.475 314.734 113.575 320.906C114.086 323.775 114.755 327.077 115.03 328.178L115.502 330.261L124.307 334.585C129.142 336.983 133.112 338.909 133.191 338.83C133.466 338.516 132.601 287.493 132.247 284.23C131.775 279.867 129.378 265.244 128.513 261.47C126.272 251.918 122.42 243.074 117.035 235.33C114.362 231.478 113.261 230.338 109.409 227.429C105.635 224.599 96.8299 220.825 96.2009 221.808Z" fill="#0A0A0F"/>
+                        <path d="M171.713 254.591C169.984 255.102 166.918 255.81 164.874 256.203C162.79 256.596 161.139 257.146 161.021 257.422C160.904 257.697 161.179 259.387 161.611 261.195C166.132 279.238 167.625 290.677 166.839 301.408C166.328 308.248 165.621 312.218 163.655 320.041C161.179 329.868 160.393 334.939 160.668 339.302C161.061 345.67 162.908 351.527 166.25 356.873L168.058 359.782L177.61 364.46C182.838 367.054 187.241 369.177 187.358 369.177C187.516 369.177 198.876 374.562 205.126 377.668C206.659 378.415 208.114 379.004 208.389 379.004C208.664 379.004 208.86 378.454 208.86 377.51C208.86 375.348 209.882 372.164 211.022 370.789C211.573 370.16 212.949 369.177 214.049 368.627C217.823 366.74 221.557 367.487 225.213 370.828C229.458 374.719 230.205 380.97 226.432 380.97C224.741 380.97 223.641 380.144 222.658 378.1C221.439 375.624 219.749 374.13 218.098 374.13C215.307 374.13 214.324 376.685 215.936 379.987C216.919 382.07 217.39 382.621 219.277 383.8C221.99 385.529 241.015 394.413 241.448 394.177C241.801 393.942 248.445 380.655 252.257 372.518C253.358 370.12 255.481 365.914 256.935 363.163C258.429 360.372 259.569 357.935 259.49 357.699C259.412 357.463 257.486 356.677 255.245 355.969C249.86 354.2 241.172 349.955 233.822 345.474C223.13 338.988 213.971 330.851 204.969 319.844C198.522 311.943 191.211 299.561 186.612 288.79C184.843 284.663 183.074 280.182 182.602 278.766C179.811 269.843 178.907 266.502 177.806 260.881C177.099 257.422 176.391 254.356 176.155 254.08C175.644 253.491 175.566 253.491 171.713 254.591ZM172.46 264.183C174.033 265.912 175.566 272.359 174.662 273.46C173.797 274.482 171.478 274.089 170.023 272.634C169.237 271.848 167.586 268.074 167.586 267.052C167.586 265.952 168.569 263.986 169.237 263.711C170.338 263.239 171.831 263.475 172.46 264.183ZM179.575 285.921C180.912 286.51 181.58 288.947 180.951 291.07C180.401 292.918 178.553 294.765 176.666 295.276C174.74 295.787 174.19 295.787 173.168 295.04C172.46 294.569 172.303 294.058 172.303 292.603C172.382 287.336 175.762 284.191 179.575 285.921ZM185.472 304.081C190.149 306.047 193.333 312.887 191.958 318.036C191.014 321.613 187.909 323.107 185.865 321.023C184.725 319.923 184.646 319.097 185.472 317.171C186.572 314.498 185.943 311.196 184.135 310.214C183.074 309.663 180.047 309.703 179.457 310.292C178.828 310.921 178.868 312.729 179.575 315.049C180.126 316.935 180.126 316.975 179.143 317.957C178.357 318.744 177.885 318.901 176.981 318.704C174.308 318.193 172.932 316.346 172.578 312.69C172.421 311.039 172.539 310.253 173.325 308.72C174.504 306.361 176.47 304.435 178.435 303.688C180.165 303.059 183.388 303.217 185.472 304.081ZM202.099 327.627C203.121 329.789 201.863 331.991 199.623 331.991C197.618 331.991 196.517 330.654 196.832 328.689C197.107 326.92 198.05 326.252 200.016 326.409C201.274 326.487 201.667 326.723 202.099 327.627ZM184.607 328.925C188.577 330.929 191.053 334.428 190.66 337.415C190.346 339.735 189.442 340.874 187.909 340.874C186.218 340.874 185.511 340.285 184.489 338.005C184.017 336.983 183.074 335.725 182.366 335.175C180.047 333.366 179.772 333.013 179.772 331.794C179.772 328.885 181.973 327.588 184.607 328.925ZM174.74 331.204C175.605 332.227 175.605 333.563 174.819 336.747C174.19 339.224 174.19 339.263 175.173 341.425C176.352 343.98 176.981 344.255 180.912 343.901C184.371 343.547 185.157 343.823 185.668 345.434C186.258 347.203 185.55 348.658 183.506 349.798C181.698 350.82 179.693 350.938 176.745 350.151C173.836 349.365 172.225 348.265 170.574 345.867C168.805 343.272 168.372 341.818 168.372 338.201C168.372 335.135 169.001 333.052 170.456 331.519C172.067 329.75 173.482 329.671 174.74 331.204ZM212.32 338.595C215.779 339.459 219.867 344.53 220.692 348.933C221.282 352.195 220.85 354.515 219.395 355.89C217.901 357.266 216.368 357.306 215.15 356.008C214.324 355.144 214.285 354.79 214.482 352.589C214.993 346.692 211.14 343.076 207.013 345.592C204.851 346.889 205.165 347.871 209.332 352.471C210.787 354.043 211.022 355.458 210.236 357.188C209.371 358.957 208.114 358.996 205.558 357.345C202.257 355.144 199.426 350.427 199.426 347.125C199.426 344.137 202.885 339.735 205.873 338.948C209.489 338.005 209.961 338.005 212.32 338.595ZM193.884 356.677C197.697 359.035 198.758 365.246 195.338 365.246C192.862 365.246 187.241 361.001 187.241 359.114C187.241 357.659 187.948 356.598 189.324 355.969C190.778 355.34 191.997 355.537 193.884 356.677ZM238.617 356.598C239.325 357.03 239.993 357.817 240.15 358.367C240.465 359.586 239.482 361.197 238.146 361.708C237.674 361.905 237.124 362.219 237.006 362.455C236.652 363.005 237.674 365.285 238.657 366.15C239.403 366.818 239.679 366.858 241.644 366.386C244.435 365.796 245.536 366.229 246.204 368.194C246.754 369.884 246.125 371.103 244.121 372.322C242.587 373.265 238.578 373.383 236.613 372.557C234.647 371.732 232.603 369.767 231.66 367.683C230.402 365.089 230.402 360.843 231.66 358.603C233.193 355.93 236.141 355.065 238.617 356.598Z" fill="#0A0A0F"/>
+                        <path d="M150.094 261.274C144.905 263.829 140.306 267.052 138.262 269.529L136.807 271.337L137.633 279.277C138.812 289.969 139.284 300.386 139.284 315.913C139.284 323.028 139.441 329.082 139.598 329.318C139.755 329.554 141.131 330.536 142.664 331.519C144.197 332.502 147.263 335.096 149.543 337.297C151.784 339.459 153.749 341.268 153.946 341.268C154.103 341.268 154.221 340.088 154.221 338.595C154.221 335.45 155.164 328.492 155.99 325.741C156.855 322.714 158.781 313.712 159.764 308.248C161.572 298.028 160.864 286.196 157.484 269.725C155.636 260.606 155.243 259.112 154.732 259.112C154.535 259.112 152.491 260.095 150.094 261.274Z" fill="#0A0A0F"/>
+                        <path d="M281.228 328.374C276.55 337.808 276.393 338.28 277.101 338.791C278.791 340.01 308.43 354.672 308.862 354.515C309.137 354.397 310.317 352.471 311.457 350.269C312.597 348.029 314.326 344.884 315.309 343.233C319.515 336.315 319.79 335.725 319.083 334.939C318.768 334.585 317.117 333.602 315.466 332.777C313.776 331.991 306.622 328.414 299.546 324.876C292.431 321.377 286.535 318.468 286.378 318.468C286.22 318.508 283.901 322.95 281.228 328.374Z" fill="#0A0A0F"/>
+                        <path d="M101.154 331.755C100.446 332.305 100.25 332.934 100.211 334.31C100.171 336.472 101.233 337.808 104.417 339.538C110.627 342.879 111.925 344.176 110.706 345.867C108.701 348.736 108.583 349.562 109.959 352.549C110.863 354.436 110.863 354.633 110.313 355.694C109.605 356.952 109.527 360.961 110.195 362.652C110.392 363.241 110.588 364.696 110.588 365.875C110.588 369.452 111.414 370.513 116.131 373.029C122.381 376.331 129.889 378.729 139.873 380.577C143.332 381.205 147.263 382.11 148.639 382.581C150.054 383.053 151.273 383.289 151.469 383.092C151.627 382.896 152.649 381.048 153.71 379.004C159.056 368.784 161.69 363.713 161.69 363.516C161.69 363.399 160.628 362.141 159.331 360.686C158.034 359.271 156.186 356.755 155.164 355.104C149.897 346.456 145.652 341.032 142.232 338.555C139.323 336.472 139.284 336.551 139.284 342.84C139.284 346.063 139.126 348.343 138.891 348.343C138.694 348.343 137.672 347.832 136.65 347.243C135.628 346.653 132.483 345.159 129.653 343.941C126.862 342.683 119.786 339.302 114.008 336.354C108.19 333.445 103.119 331.047 102.726 331.047C102.333 331.047 101.626 331.362 101.154 331.755Z" fill="#0A0A0F"/>
+                        <path d="M273.012 344.491C272.816 344.766 272.265 345.788 271.833 346.771C271.401 347.754 267.391 356.048 262.91 365.246C258.429 374.444 252.847 386.119 250.488 391.19C245.103 402.747 245.3 402.354 244.553 402.511C243.884 402.629 237.792 399.917 227.335 394.846C218.53 390.522 212.673 387.77 203.75 383.721C201.47 382.66 197.264 380.655 194.394 379.24C191.525 377.786 189.009 376.724 188.852 376.842C188.38 377.117 185.904 381.363 181.344 389.814C179.143 393.902 177.059 397.597 176.705 397.951C176.194 398.541 176.194 398.737 176.666 399.327C177.295 400.113 186.965 406.442 195.299 411.591C198.561 413.596 202.61 416.151 204.34 417.252C212.673 422.519 223.994 428.809 236.534 435.177C245.889 439.854 249.781 441.505 251.668 441.505C253.594 441.505 258.193 437.771 260.394 434.39C260.905 433.604 262.753 430.853 264.522 428.298C270.929 418.824 273.563 414.893 275.292 412.102C276.275 410.491 278.634 406.717 280.56 403.651C282.486 400.585 285.513 395.593 287.281 392.566C289.05 389.5 291.841 384.822 293.453 382.149C295.065 379.437 297.345 375.466 298.485 373.304C299.624 371.142 301.708 367.487 303.084 365.128C304.459 362.809 305.56 360.726 305.56 360.529C305.56 360.332 302.966 358.839 299.782 357.227C296.558 355.655 289.483 351.999 284.019 349.169C278.516 346.338 273.916 344.019 273.72 344.019C273.563 344.019 273.248 344.255 273.012 344.491Z" fill="#0A0A0F"/>
+                        <path d="M165.896 368.902C161.061 377.707 156.972 385.883 157.13 386.276C157.287 386.709 169.551 395.396 170.613 395.789C170.927 395.907 171.595 394.964 172.578 392.92C173.364 391.19 175.172 387.77 176.588 385.294C177.963 382.817 179.811 379.515 180.636 378.021C181.501 376.488 182.327 375.113 182.563 374.877C182.759 374.68 182.916 374.366 182.916 374.169C182.916 373.776 168.529 366.818 167.625 366.818C167.271 366.818 166.524 367.683 165.896 368.902Z" fill="#0A0A0F"/>
+                        <path d="M122.774 383.839C122.774 384.154 123.127 386.512 123.521 389.067C124.307 393.863 124.543 395.278 126.115 405.459C127.137 411.906 127.451 412.574 129.889 413.203C131.068 413.517 131.657 413.478 132.522 413.046C134.724 411.906 134.724 411.827 134.252 404.634C133.191 389.46 132.915 385.883 132.64 385.608C132.522 385.49 130.635 384.979 128.473 384.507C126.311 384.036 124.149 383.564 123.678 383.446C123.049 383.289 122.774 383.407 122.774 383.839Z" fill="#0A0A0F"/>
+                    </svg>
+
+                </div>
+                <span class="logo-text">Seshlog</span>
+            </a>
+            <nav class="nav">
+                <a href="#vision">Vision</a>
+                <a href="#colors">Colors</a>
+                <a href="#typography">Typography</a>
+                <a href="#components">Components</a>
+            </nav>
+            <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+                <span class="theme-icon">ðŸŒ™</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-logo">
+                <svg width="450" height="450" viewBox="0 0 450 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="450" height="450"/>
+                    <path d="M223.798 8.71411L220.85 8.91065L220.81 25.499C220.771 34.6187 220.614 42.4019 220.496 42.7949C220.299 43.306 219.867 42.7556 218.884 40.7116C215.111 33.1643 205.991 25.9314 197.264 23.6122C191.329 22.0398 180.558 22.5902 179.182 24.5556C178.003 26.2459 178.907 30.2947 180.479 30.3733C180.833 30.3733 184.253 30.4126 188.027 30.4519C194.513 30.5306 195.063 30.6092 197.382 31.5526C203.436 34.147 208.782 38.6675 212.202 44.2101C213.853 46.9224 216.604 53.7621 216.211 54.1945C216.133 54.2732 215.622 53.9194 215.111 53.4084C211.376 49.7526 203.907 45.6645 199.112 44.6818C193.058 43.4239 186.336 44.1708 180.715 46.6472C176.588 48.4947 171.36 52.4256 168.805 55.649C166.485 58.5578 167.586 61.5846 171.085 62.0563C172.618 62.2529 172.736 62.2136 176.195 58.8723C178.907 56.2779 180.44 55.1379 182.641 54.1159C186.494 52.347 188.223 51.9932 192.94 51.9539C197.618 51.9539 201.117 52.7794 204.419 54.7449C207.603 56.6317 215.975 65.1224 215.307 65.7907C215.228 65.9086 213.656 65.6727 211.887 65.2403C203.829 63.3142 194.159 65.9086 187.869 71.6477C184.882 74.3993 182.759 77.4261 181.698 80.5315C180.715 83.4011 180.755 83.6369 182.091 85.0127C182.956 85.8775 183.624 86.1527 184.764 86.1527C186.769 86.1527 187.909 85.2879 188.42 83.4011C188.813 81.9466 191.604 78.173 193.373 76.6792C194.945 75.382 198.326 73.5345 200.684 72.7483C202.768 72.0408 203.75 71.9622 206.895 72.1194C211.573 72.3946 214.678 73.4559 218.57 76.0503C221.479 77.9764 221.518 78.055 221.321 79.4309C221.203 80.217 220.221 86.8602 219.12 94.1717C218.059 101.483 216.997 107.655 216.801 107.851C216.604 108.048 215.228 108.362 213.774 108.598C200.92 110.406 186.769 117.836 179.497 126.602C177.138 129.432 172.146 139.023 172.382 140.281C172.5 140.949 174.504 140.989 230.48 141.107C269.75 141.185 288.579 141.342 288.893 141.618C289.758 142.325 295.537 151.091 297.699 154.943C298.839 156.987 301.197 161.075 302.927 163.984C307.172 171.139 321.48 198.694 325.215 206.831C326.158 208.875 327.966 212.845 329.264 215.676C332.959 223.773 334.728 228.412 337.951 238.475C342.904 254.08 343.926 259.505 345.655 279.592C345.891 282.068 346.049 292.564 346.049 302.863V321.613H340.034H334.02L331.976 325.583C330.836 327.785 329.971 329.671 330.089 329.75C330.168 329.829 335.435 329.907 341.764 329.868C350.373 329.868 353.36 329.711 353.596 329.357C354.028 328.649 353.989 290.677 353.517 281.439C352.967 271.023 352.259 265.519 350.137 254.867C347.739 242.995 344.712 233.129 340.074 221.965C338.776 218.938 337.204 215.047 336.536 213.317C334.688 208.639 318.611 176.76 315.152 170.863C313.501 168.033 311.535 164.495 310.828 163.002C310.12 161.469 308.469 158.481 307.172 156.319C305.875 154.196 304.892 152.349 305.01 152.231C305.442 151.799 314.995 162.019 318.572 166.736C327.573 178.686 332.919 187.412 337.008 197.043C338.894 201.367 339.798 202.507 341.567 202.507C343.061 202.507 345.302 201.603 346.049 200.738C347.306 199.244 344.909 192.876 340.074 185.015C332.605 172.75 331.819 171.571 326.748 165.203C323.682 161.351 315.112 152.034 312.125 149.283C308.233 145.706 305.167 143.19 302.14 141.067C300.332 139.809 298.878 138.669 298.878 138.512C298.878 138.355 299.861 137.805 301.079 137.294C306.111 135.132 307.919 132.773 308.233 127.977C308.43 124.872 307.762 123.103 305.56 120.862C301.629 116.853 295.969 116.971 291.763 121.138C289.719 123.182 289.208 124.046 287.675 128.488C287.4 129.353 286.81 129.078 284.255 126.837C277.966 121.295 265.898 114.494 257.603 111.743C252.533 110.053 240.976 107.773 236.18 107.497C234.018 107.38 232.053 107.104 231.817 106.908C231.581 106.751 231.267 105.493 231.109 104.117C230.755 100.815 229.026 88.354 228.318 83.9514C227.414 78.3302 227.454 77.7799 229.222 76.6006C239.089 70.1146 249.034 70.547 256.188 77.7799C257.603 79.195 259.294 81.4356 259.962 82.6935C261.456 85.5237 262.596 86.3492 264.522 86.0348C266.645 85.681 267.431 84.7769 267.431 82.6542C267.431 79.195 264.05 73.8097 259.923 70.665C256.817 68.3064 251.589 65.7907 248.327 65.1224C244.828 64.3755 240.897 64.3755 237.006 65.1224C235.276 65.4369 233.822 65.6334 233.704 65.5548C233.389 65.2403 237.438 60.4053 239.954 58.0861C244.199 54.1552 250.056 51.9539 256.188 51.9539C262.949 51.9539 268.453 54.3518 273.209 59.2654C275.804 61.9777 276.118 62.1742 277.651 62.1742C279.695 62.1742 281.582 60.5233 281.582 58.7151C281.582 54.4697 269.986 46.0576 261.967 44.4459C258.114 43.699 250.685 44.1708 246.754 45.4286C242.981 46.6472 237.988 49.5561 234.962 52.347C233.743 53.4477 232.682 54.2732 232.603 54.1945C232.289 53.8801 233.704 49.6347 235.001 47.0796C238.696 39.8861 244.671 34.3042 251.786 31.3954C253.673 30.6092 254.577 30.5306 261.023 30.5306C267.667 30.5306 268.217 30.4913 269.278 29.7051C270.143 29.0761 270.418 28.4865 270.497 27.2286C270.615 25.8528 270.418 25.4204 269.475 24.477C268.099 23.0619 265.74 22.6688 259.176 22.7081C253.869 22.7081 250.253 23.5729 245.496 25.9707C239.403 29.0368 235.433 32.6139 231.227 38.7854C229.851 40.8295 228.593 42.5198 228.476 42.5198C228.358 42.5198 228.279 34.9725 228.279 25.7742C228.318 6.43419 228.829 8.36033 223.798 8.71411ZM240.229 115.477C252.729 117.01 262.478 120.705 273.524 128.056C279.381 131.948 280.363 132.812 279.616 133.323C279.066 133.716 192.744 133.795 186.965 133.402C185.59 133.323 184.489 133.088 184.489 132.852C184.489 132.655 186.336 130.65 188.616 128.449C192.154 124.99 193.294 124.125 196.95 122.199C202.06 119.565 205.441 118.268 210.433 117.05C220.574 114.494 228.751 114.101 240.229 115.477ZM300.568 126.326C301.236 127.191 301.276 127.624 301.001 128.685C300.686 129.707 300.057 130.336 297.895 131.633C294.672 133.599 293.768 133.756 293.768 132.341C293.768 130.886 295.261 127.348 296.441 126.13C297.777 124.715 299.428 124.793 300.568 126.326Z" fill="#0A0A0F"/>
+                    <path d="M182.641 147.75C171.438 147.868 170.377 147.946 170.18 148.575C169.748 149.99 168.805 157.656 168.569 161.626C168.215 167.168 167.704 170.038 166.643 172.2C166.131 173.183 164.245 176.996 162.397 180.691C157.287 190.872 156.973 192.09 158.977 193.545C159.528 193.977 161.1 194.724 162.476 195.196C165.62 196.336 165.935 196.807 165.306 199.166C164.481 202.311 164.677 203.647 166.21 205.101C167.586 206.359 167.586 206.438 166.996 207.381C165.896 209.072 166.367 210.723 168.372 212.138C170.338 213.514 170.18 212.963 169.944 219.095C169.866 221.022 169.984 221.572 170.849 222.673C172.578 224.952 174.19 225.463 179.968 225.621C186.218 225.817 194.945 225.11 198.994 224.127C203.711 222.908 209.371 219.882 213.538 216.226C215.543 214.536 217.39 213.12 217.665 213.12C218.255 213.12 220.653 215.558 220.653 216.147C220.653 217.012 216.329 221.257 213.499 223.223C210.157 225.542 206.462 227.429 204.615 227.861C203.907 228.019 203.239 228.333 203.121 228.608C202.807 229.473 206.738 243.27 208.507 247.594C209.843 250.739 213.577 255.456 216.25 257.264C218.216 258.64 223.876 260.684 225.763 260.684C227.768 260.684 228.043 261.038 228.358 263.75C228.672 266.777 228.279 267.406 226.235 267.092C221.4 266.384 217.705 264.89 213.302 261.785C208.231 258.247 204.851 254.277 202.728 249.324C201.549 246.612 201.392 246.572 197.775 247.555C195.928 248.105 195.495 248.341 195.495 249.049C195.495 250.346 197.932 255.967 199.387 258.09C201.274 260.802 205.44 265.126 208.153 267.17C212.398 270.354 220.181 273.42 225.291 273.931L228.318 274.246L228.436 277.351L228.554 280.457L225.881 280.26C215.739 279.474 202.414 272.084 196.321 263.829C193.53 260.095 191.368 256.282 190.228 253.137C189.795 251.8 189.127 250.582 188.773 250.346C188.38 250.11 187.437 250.15 186.061 250.425C182.641 251.132 182.681 251.093 183.899 254.827C186.415 262.532 188.97 266.581 195.338 273.106C199.348 277.194 203.239 279.946 208.978 282.737C213.459 284.859 220.299 286.825 225.213 287.296L228.318 287.611L228.436 290.48C228.515 292.682 228.436 293.389 228.004 293.547C227.139 293.861 218.491 292.642 215.228 291.738C211.455 290.677 201.785 285.96 198.601 283.641C197.225 282.619 194.277 280.221 192.036 278.255C189.795 276.329 187.869 274.875 187.712 274.993C187.594 275.15 187.869 276.172 188.38 277.312C188.852 278.413 190.031 281.321 191.014 283.719C192.586 287.572 193.019 288.318 194.709 289.734C198.876 293.232 204.143 295.787 212.595 298.342C217.469 299.836 220.692 300.386 224.82 300.386C227.375 300.386 228.082 300.504 228.279 301.015C228.593 301.841 228.593 303.885 228.24 305.496L228.004 306.794L224.427 306.558C219.906 306.243 210.393 304.239 207.17 302.902C205.834 302.352 203.632 301.29 202.256 300.504C199.701 299.089 198.443 299.011 198.915 300.268C199.033 300.661 200.134 302.391 201.352 304.121C202.571 305.85 204.3 308.405 205.244 309.82C209.607 316.424 221.085 328.728 227.925 334.074C233.35 338.319 243.177 344.137 251.314 347.872C255.599 349.876 261.967 351.999 262.36 351.567C262.517 351.409 266.959 342.722 272.266 332.227C277.533 321.731 282.171 312.611 282.486 311.982C282.84 311.314 284.098 308.72 285.277 306.204C288.697 298.853 288.893 298.657 292.824 299.639C294.043 299.954 294.554 300.268 294.554 300.779C294.554 301.173 293.335 303.963 291.841 306.99C289.326 312.061 289.168 312.533 289.758 313.083C290.662 313.869 321.598 329.082 322.267 329.082C323.289 329.082 333.43 306.912 335.003 301.173C336.732 294.922 337.007 286.274 335.632 280.889C334.374 276.054 331.19 270.629 327.495 266.934C323.249 262.768 318.532 260.291 309.137 257.304C305.206 256.046 303.713 255.731 303.32 256.046C303.044 256.242 302.455 257.697 301.983 259.23C299.192 268.625 292.51 279.277 284.844 286.668C278.712 292.564 273.052 296.809 272.108 296.22C271.676 295.984 271.637 290.127 272.069 289.576C272.226 289.341 273.877 287.965 275.725 286.55C280.206 283.051 286.063 276.88 288.775 272.831C292.863 266.62 297.974 255.299 297.03 254.356C296.598 253.923 292.47 252.823 291.213 252.823C290.466 252.823 290.19 253.176 289.601 254.867C288.343 258.64 285.277 265.205 283.547 267.76C281.031 271.573 274.663 278.531 272.698 279.671C272.226 279.946 272.148 279.277 272.148 276.015V272.084L274.31 269.686C277.258 266.502 279.695 262.65 281.975 257.618C284.962 250.936 284.962 250.818 280.992 250.15C278.162 249.678 277.494 249.953 276.825 251.918C275.803 255.102 272.895 260.291 272.148 260.291C271.951 260.291 271.715 257.579 271.676 254.277L271.558 248.302L270.182 247.634C269.435 247.28 267.784 246.848 266.566 246.73L264.286 246.454V283.994V321.535L263.421 321.731C262.045 322.006 236.534 321.77 236.023 321.456C235.708 321.259 235.59 305.811 235.59 260.213C235.59 226.682 235.512 199.166 235.433 199.087C235.355 198.969 234.293 198.773 233.075 198.615C228.829 198.026 225.96 194.881 226.982 191.894C227.375 190.754 228.358 189.928 229.262 189.928C229.458 189.928 230.402 190.714 231.266 191.658C232.17 192.601 233.35 193.505 233.9 193.663C235.197 193.977 238.853 192.876 240.111 191.776C241.526 190.518 244.789 184.897 246.243 181.123C247.383 178.332 247.54 177.467 247.54 174.008C247.58 170.706 247.422 169.802 246.715 168.505C244.317 163.945 240.072 162.137 236.18 163.945C233.35 165.282 232.21 166.815 230.716 171.453L229.891 174.008H227.611C226.196 174.008 225.213 173.812 225.016 173.497C224.859 173.222 224.505 171.532 224.23 169.763C223.169 162.687 221.832 159.307 218.766 156.005C213.577 150.462 207.917 148.104 198.837 147.75C196.675 147.671 189.402 147.671 182.641 147.75ZM195.888 157.027C197.5 157.577 200.33 158.56 202.138 159.228C204.851 160.25 206.266 160.486 210.393 160.761L215.346 161.036V162.805V164.574L209.45 164.535H203.554L199.426 162.923C190.346 159.385 185.668 159.228 178.868 162.294C177.177 163.041 175.566 163.552 175.251 163.434C174.426 163.12 174.033 160.486 174.701 159.857C175.644 158.992 179.182 157.302 181.776 156.516C185.354 155.415 191.8 155.651 195.888 157.027ZM192.115 167.326C193.412 167.679 195.731 168.466 197.343 169.094C200.212 170.234 200.409 170.274 207.406 170.274C211.337 170.274 214.796 170.431 215.071 170.628C215.425 170.824 215.543 171.571 215.464 172.672L215.346 174.401L207.484 174.598L199.623 174.794L196.753 176.288C192.665 178.411 189.206 179.236 185.825 178.843C184.332 178.686 180.597 178.411 177.531 178.293C173.404 178.096 171.91 177.9 171.91 177.546C171.91 176.799 175.055 172.711 177.335 170.51C180.833 167.129 186.572 165.91 192.115 167.326Z" fill="#0A0A0F"/>
+                    <path d="M96.2009 221.808C95.8864 222.319 96.3188 225.739 97.6553 233.168C98.3236 236.745 99.1098 241.148 99.4242 242.995C100.21 247.437 101.468 252.508 101.94 252.98C102.137 253.176 103.788 252.98 106.067 252.429C109.251 251.722 110.038 251.643 111.02 252.036C114.401 253.451 114.676 257.815 111.492 259.033C110.902 259.269 108.819 259.662 106.932 259.898C104.495 260.252 103.394 260.566 103.237 260.959C103.001 261.51 104.141 269.647 104.574 270.787C104.81 271.416 106.618 271.455 109.448 270.905C114.676 269.883 117.035 270.551 117.506 273.106C118.096 276.172 116.484 277.351 110.706 278.02C108.583 278.255 106.618 278.688 106.343 278.924C105.95 279.317 105.95 279.867 106.421 281.95C106.736 283.326 107.089 285.37 107.247 286.432C107.64 289.576 107.522 289.537 112.514 288.79C117.742 288.043 119 288.201 120.061 289.891C120.926 291.345 121.005 292.092 120.376 293.468C119.747 294.804 117.939 295.591 114.283 296.062C109.016 296.77 109.369 296.534 109.645 299.128C109.88 301.723 111.02 307.108 111.374 307.541C111.492 307.737 113.536 307.541 115.934 307.187C118.332 306.833 120.73 306.676 121.319 306.833C123.992 307.501 124.818 310.567 122.852 312.572C121.712 313.673 121.005 313.869 116.17 314.38C112.475 314.734 112.475 314.734 113.575 320.906C114.086 323.775 114.755 327.077 115.03 328.178L115.502 330.261L124.307 334.585C129.142 336.983 133.112 338.909 133.191 338.83C133.466 338.516 132.601 287.493 132.247 284.23C131.775 279.867 129.378 265.244 128.513 261.47C126.272 251.918 122.42 243.074 117.035 235.33C114.362 231.478 113.261 230.338 109.409 227.429C105.635 224.599 96.8299 220.825 96.2009 221.808Z" fill="#0A0A0F"/>
+                    <path d="M171.713 254.591C169.984 255.102 166.918 255.81 164.874 256.203C162.79 256.596 161.139 257.146 161.021 257.422C160.904 257.697 161.179 259.387 161.611 261.195C166.132 279.238 167.625 290.677 166.839 301.408C166.328 308.248 165.621 312.218 163.655 320.041C161.179 329.868 160.393 334.939 160.668 339.302C161.061 345.67 162.908 351.527 166.25 356.873L168.058 359.782L177.61 364.46C182.838 367.054 187.241 369.177 187.358 369.177C187.516 369.177 198.876 374.562 205.126 377.668C206.659 378.415 208.114 379.004 208.389 379.004C208.664 379.004 208.86 378.454 208.86 377.51C208.86 375.348 209.882 372.164 211.022 370.789C211.573 370.16 212.949 369.177 214.049 368.627C217.823 366.74 221.557 367.487 225.213 370.828C229.458 374.719 230.205 380.97 226.432 380.97C224.741 380.97 223.641 380.144 222.658 378.1C221.439 375.624 219.749 374.13 218.098 374.13C215.307 374.13 214.324 376.685 215.936 379.987C216.919 382.07 217.39 382.621 219.277 383.8C221.99 385.529 241.015 394.413 241.448 394.177C241.801 393.942 248.445 380.655 252.257 372.518C253.358 370.12 255.481 365.914 256.935 363.163C258.429 360.372 259.569 357.935 259.49 357.699C259.412 357.463 257.486 356.677 255.245 355.969C249.86 354.2 241.172 349.955 233.822 345.474C223.13 338.988 213.971 330.851 204.969 319.844C198.522 311.943 191.211 299.561 186.612 288.79C184.843 284.663 183.074 280.182 182.602 278.766C179.811 269.843 178.907 266.502 177.806 260.881C177.099 257.422 176.391 254.356 176.155 254.08C175.644 253.491 175.566 253.491 171.713 254.591ZM172.46 264.183C174.033 265.912 175.566 272.359 174.662 273.46C173.797 274.482 171.478 274.089 170.023 272.634C169.237 271.848 167.586 268.074 167.586 267.052C167.586 265.952 168.569 263.986 169.237 263.711C170.338 263.239 171.831 263.475 172.46 264.183ZM179.575 285.921C180.912 286.51 181.58 288.947 180.951 291.07C180.401 292.918 178.553 294.765 176.666 295.276C174.74 295.787 174.19 295.787 173.168 295.04C172.46 294.569 172.303 294.058 172.303 292.603C172.382 287.336 175.762 284.191 179.575 285.921ZM185.472 304.081C190.149 306.047 193.333 312.887 191.958 318.036C191.014 321.613 187.909 323.107 185.865 321.023C184.725 319.923 184.646 319.097 185.472 317.171C186.572 314.498 185.943 311.196 184.135 310.214C183.074 309.663 180.047 309.703 179.457 310.292C178.828 310.921 178.868 312.729 179.575 315.049C180.126 316.935 180.126 316.975 179.143 317.957C178.357 318.744 177.885 318.901 176.981 318.704C174.308 318.193 172.932 316.346 172.578 312.69C172.421 311.039 172.539 310.253 173.325 308.72C174.504 306.361 176.47 304.435 178.435 303.688C180.165 303.059 183.388 303.217 185.472 304.081ZM202.099 327.627C203.121 329.789 201.863 331.991 199.623 331.991C197.618 331.991 196.517 330.654 196.832 328.689C197.107 326.92 198.05 326.252 200.016 326.409C201.274 326.487 201.667 326.723 202.099 327.627ZM184.607 328.925C188.577 330.929 191.053 334.428 190.66 337.415C190.346 339.735 189.442 340.874 187.909 340.874C186.218 340.874 185.511 340.285 184.489 338.005C184.017 336.983 183.074 335.725 182.366 335.175C180.047 333.366 179.772 333.013 179.772 331.794C179.772 328.885 181.973 327.588 184.607 328.925ZM174.74 331.204C175.605 332.227 175.605 333.563 174.819 336.747C174.19 339.224 174.19 339.263 175.173 341.425C176.352 343.98 176.981 344.255 180.912 343.901C184.371 343.547 185.157 343.823 185.668 345.434C186.258 347.203 185.55 348.658 183.506 349.798C181.698 350.82 179.693 350.938 176.745 350.151C173.836 349.365 172.225 348.265 170.574 345.867C168.805 343.272 168.372 341.818 168.372 338.201C168.372 335.135 169.001 333.052 170.456 331.519C172.067 329.75 173.482 329.671 174.74 331.204ZM212.32 338.595C215.779 339.459 219.867 344.53 220.692 348.933C221.282 352.195 220.85 354.515 219.395 355.89C217.901 357.266 216.368 357.306 215.15 356.008C214.324 355.144 214.285 354.79 214.482 352.589C214.993 346.692 211.14 343.076 207.013 345.592C204.851 346.889 205.165 347.871 209.332 352.471C210.787 354.043 211.022 355.458 210.236 357.188C209.371 358.957 208.114 358.996 205.558 357.345C202.257 355.144 199.426 350.427 199.426 347.125C199.426 344.137 202.885 339.735 205.873 338.948C209.489 338.005 209.961 338.005 212.32 338.595ZM193.884 356.677C197.697 359.035 198.758 365.246 195.338 365.246C192.862 365.246 187.241 361.001 187.241 359.114C187.241 357.659 187.948 356.598 189.324 355.969C190.778 355.34 191.997 355.537 193.884 356.677ZM238.617 356.598C239.325 357.03 239.993 357.817 240.15 358.367C240.465 359.586 239.482 361.197 238.146 361.708C237.674 361.905 237.124 362.219 237.006 362.455C236.652 363.005 237.674 365.285 238.657 366.15C239.403 366.818 239.679 366.858 241.644 366.386C244.435 365.796 245.536 366.229 246.204 368.194C246.754 369.884 246.125 371.103 244.121 372.322C242.587 373.265 238.578 373.383 236.613 372.557C234.647 371.732 232.603 369.767 231.66 367.683C230.402 365.089 230.402 360.843 231.66 358.603C233.193 355.93 236.141 355.065 238.617 356.598Z" fill="#0A0A0F"/>
+                    <path d="M150.094 261.274C144.905 263.829 140.306 267.052 138.262 269.529L136.807 271.337L137.633 279.277C138.812 289.969 139.284 300.386 139.284 315.913C139.284 323.028 139.441 329.082 139.598 329.318C139.755 329.554 141.131 330.536 142.664 331.519C144.197 332.502 147.263 335.096 149.543 337.297C151.784 339.459 153.749 341.268 153.946 341.268C154.103 341.268 154.221 340.088 154.221 338.595C154.221 335.45 155.164 328.492 155.99 325.741C156.855 322.714 158.781 313.712 159.764 308.248C161.572 298.028 160.864 286.196 157.484 269.725C155.636 260.606 155.243 259.112 154.732 259.112C154.535 259.112 152.491 260.095 150.094 261.274Z" fill="#0A0A0F"/>
+                    <path d="M281.228 328.374C276.55 337.808 276.393 338.28 277.101 338.791C278.791 340.01 308.43 354.672 308.862 354.515C309.137 354.397 310.317 352.471 311.457 350.269C312.597 348.029 314.326 344.884 315.309 343.233C319.515 336.315 319.79 335.725 319.083 334.939C318.768 334.585 317.117 333.602 315.466 332.777C313.776 331.991 306.622 328.414 299.546 324.876C292.431 321.377 286.535 318.468 286.378 318.468C286.22 318.508 283.901 322.95 281.228 328.374Z" fill="#0A0A0F"/>
+                    <path d="M101.154 331.755C100.446 332.305 100.25 332.934 100.211 334.31C100.171 336.472 101.233 337.808 104.417 339.538C110.627 342.879 111.925 344.176 110.706 345.867C108.701 348.736 108.583 349.562 109.959 352.549C110.863 354.436 110.863 354.633 110.313 355.694C109.605 356.952 109.527 360.961 110.195 362.652C110.392 363.241 110.588 364.696 110.588 365.875C110.588 369.452 111.414 370.513 116.131 373.029C122.381 376.331 129.889 378.729 139.873 380.577C143.332 381.205 147.263 382.11 148.639 382.581C150.054 383.053 151.273 383.289 151.469 383.092C151.627 382.896 152.649 381.048 153.71 379.004C159.056 368.784 161.69 363.713 161.69 363.516C161.69 363.399 160.628 362.141 159.331 360.686C158.034 359.271 156.186 356.755 155.164 355.104C149.897 346.456 145.652 341.032 142.232 338.555C139.323 336.472 139.284 336.551 139.284 342.84C139.284 346.063 139.126 348.343 138.891 348.343C138.694 348.343 137.672 347.832 136.65 347.243C135.628 346.653 132.483 345.159 129.653 343.941C126.862 342.683 119.786 339.302 114.008 336.354C108.19 333.445 103.119 331.047 102.726 331.047C102.333 331.047 101.626 331.362 101.154 331.755Z" fill="#0A0A0F"/>
+                    <path d="M273.012 344.491C272.816 344.766 272.265 345.788 271.833 346.771C271.401 347.754 267.391 356.048 262.91 365.246C258.429 374.444 252.847 386.119 250.488 391.19C245.103 402.747 245.3 402.354 244.553 402.511C243.884 402.629 237.792 399.917 227.335 394.846C218.53 390.522 212.673 387.77 203.75 383.721C201.47 382.66 197.264 380.655 194.394 379.24C191.525 377.786 189.009 376.724 188.852 376.842C188.38 377.117 185.904 381.363 181.344 389.814C179.143 393.902 177.059 397.597 176.705 397.951C176.194 398.541 176.194 398.737 176.666 399.327C177.295 400.113 186.965 406.442 195.299 411.591C198.561 413.596 202.61 416.151 204.34 417.252C212.673 422.519 223.994 428.809 236.534 435.177C245.889 439.854 249.781 441.505 251.668 441.505C253.594 441.505 258.193 437.771 260.394 434.39C260.905 433.604 262.753 430.853 264.522 428.298C270.929 418.824 273.563 414.893 275.292 412.102C276.275 410.491 278.634 406.717 280.56 403.651C282.486 400.585 285.513 395.593 287.281 392.566C289.05 389.5 291.841 384.822 293.453 382.149C295.065 379.437 297.345 375.466 298.485 373.304C299.624 371.142 301.708 367.487 303.084 365.128C304.459 362.809 305.56 360.726 305.56 360.529C305.56 360.332 302.966 358.839 299.782 357.227C296.558 355.655 289.483 351.999 284.019 349.169C278.516 346.338 273.916 344.019 273.72 344.019C273.563 344.019 273.248 344.255 273.012 344.491Z" fill="#0A0A0F"/>
+                    <path d="M165.896 368.902C161.061 377.707 156.972 385.883 157.13 386.276C157.287 386.709 169.551 395.396 170.613 395.789C170.927 395.907 171.595 394.964 172.578 392.92C173.364 391.19 175.172 387.77 176.588 385.294C177.963 382.817 179.811 379.515 180.636 378.021C181.501 376.488 182.327 375.113 182.563 374.877C182.759 374.68 182.916 374.366 182.916 374.169C182.916 373.776 168.529 366.818 167.625 366.818C167.271 366.818 166.524 367.683 165.896 368.902Z" fill="#0A0A0F"/>
+                    <path d="M122.774 383.839C122.774 384.154 123.127 386.512 123.521 389.067C124.307 393.863 124.543 395.278 126.115 405.459C127.137 411.906 127.451 412.574 129.889 413.203C131.068 413.517 131.657 413.478 132.522 413.046C134.724 411.906 134.724 411.827 134.252 404.634C133.191 389.46 132.915 385.883 132.64 385.608C132.522 385.49 130.635 384.979 128.473 384.507C126.311 384.036 124.149 383.564 123.678 383.446C123.049 383.289 122.774 383.407 122.774 383.839Z" fill="#0A0A0F"/>
+                </svg>
+
+            </div>
+            <h1>Seshlog</h1>
+            <p class="hero-tagline">"Building monuments out of moments."</p>
+            <p class="hero-description">
+                Transcribing a meeting isn't just about converting audio to text; it's about capturing lightning in a
+                bottle. In the vast, often chaotic nebula of human conversation, Seshlog acts as the architect, turning
+                fleeting ideas into permanent monuments.
+            </p>
+            <p class="hero-meta">Brand Book v2.0 Â· Geometric Surrealism Â· Modern Retro</p>
+        </div>
+    </section>
+
+    <!-- Vision -->
+    <section id="vision" class="section vision">
+        <div class="container">
+            <div class="vision-grid">
+                <div class="vision-text">
+                    <p class="section-label">The Vision</p>
+                    <h2>Cosmic Archaeology</h2>
+                    <p>
+                        Meetings are the "ancient ruins" of our daily workâ€”rich with history, full of hidden treasures,
+                        and sometimes a bit mysterious. Seshlog exists at the intersection of the grounded and the
+                        infinite.
+                    </p>
+                    <p>
+                        We use the <strong>Pyramid</strong> to symbolize the structural integrity and clarity we bring
+                        to your data, set against a <strong>Cosmic Backdrop</strong> that represents the boundless
+                        potential of your ideas.
+                    </p>
+                    <p>
+                        Our brand styleâ€”<em>Geometric Surrealism meets Modern Retro</em>â€”is designed to reflect this
+                        mission. When you look back at your "sessions," you aren't just looking at a logâ€”you're looking
+                        at a map of the stars.
+                    </p>
+                </div>
+                <div class="vision-graphic">
+                    <div class="pyramid-illustration"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pillars -->
+    <section class="section">
+        <div class="container">
+            <p class="section-label">Core Pillars</p>
+            <h2 class="section-title">The Aesthetic</h2>
+            <p class="section-intro">
+                Three principles guide every visual decision we makeâ€”from the golden glow of our interface to the
+                texture of our backgrounds.
+            </p>
+
+            <div class="pillars-grid">
+                <div class="pillar-card">
+                    <div class="pillar-icon">â–³</div>
+                    <h3>Structured Permanence</h3>
+                    <p>Like the golden pyramids, our interface is built on clean, sharp geometry. We provide a solid
+                        foundation for your thoughts so they don't drift away into the void.</p>
+                </div>
+                <div class="pillar-card">
+                    <div class="pillar-icon">â—ˆ</div>
+                    <h3>Tactile Authenticity</h3>
+                    <p>We embrace a textured grain and "noise" effect. In an era of sterile, overly-smooth AI, Seshlog
+                        feels human. It has the grit of a screen-print and the soul of a vintage record.</p>
+                </div>
+                <div class="pillar-card">
+                    <div class="pillar-icon">âœ¦</div>
+                    <h3>Vibrant Clarity</h3>
+                    <p>We don't do "corporate gray." By pairing warm ambers with deep indigo nebulas, we create a
+                        high-energy, synthwave environment where insights always shine through.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Colors -->
+    <section id="colors" class="section">
+        <div class="container">
+            <p class="section-label">Visual Identity</p>
+            <h2 class="section-title">Color Palette</h2>
+            <p class="section-intro">
+                Our palette balances the warmth of golden monuments against the infinite depth of cosmic spaceâ€”creating
+                contrast where insights shine.
+            </p>
+
+            <div class="color-section">
+                <h3>Golden Monuments</h3>
+                <div class="color-grid">
+                    <div class="color-card">
+                        <div class="color-swatch"
+                            style="background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);"></div>
+                        <div class="color-info">
+                            <div class="color-name">Amber</div>
+                            <div class="color-hex">#F59E0B</div>
+                        </div>
+                    </div>
+                    <div class="color-card">
+                        <div class="color-swatch" style="background: #FBBF24;"></div>
+                        <div class="color-info">
+                            <div class="color-name">Amber Bright</div>
+                            <div class="color-hex">#FBBF24</div>
+                        </div>
+                    </div>
+                    <div class="color-card">
+                        <div class="color-swatch" style="background: #D97706;"></div>
+                        <div class="color-info">
+                            <div class="color-name">Amber Deep</div>
+                            <div class="color-hex">#D97706</div>
+                        </div>
+                    </div>
+                    <div class="color-card">
+                        <div class="color-swatch" style="background: #EAB308;"></div>
+                        <div class="color-info">
+                            <div class="color-name">Gold</div>
+                            <div class="color-hex">#EAB308</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="color-section">
+                <h3>Cosmic Depths</h3>
+                <div class="color-grid">
+                    <div class="color-card">
+                        <div class="color-swatch" style="background: #0D0B1E;"></div>
+                        <div class="color-info">
+                            <div class="color-name">Void</div>
+                            <div class="color-hex">#0D0B1E</div>
+                        </div>
+                    </div>
+                    <div class="color-card">
+                        <div class="color-swatch" style="background: #1A1532;"></div>
+                        <div class="color-info">
+                            <div class="color-name">Nebula Deep</div>
+                            <div class="color-hex">#1A1532</div>
+                        </div>
+                    </div>
+                    <div class="color-card">
+                        <div class="color-swatch" style="background: #2D2456;"></div>
+                        <div class="color-info">
+                            <div class="color-name">Nebula Mid</div>
+                            <div class="color-hex">#2D2456</div>
+                        </div>
+                    </div>
+                    <div class="color-card">
+                        <div class="color-swatch" style="background: #4C3F91;"></div>
+                        <div class="color-info">
+                            <div class="color-name">Indigo</div>
+                            <div class="color-hex">#4C3F91</div>
+                        </div>
+                    </div>
+                    <div class="color-card">
+                        <div class="color-swatch" style="background: #6B5AAD;"></div>
+                        <div class="color-info">
+                            <div class="color-name">Violet</div>
+                            <div class="color-hex">#6B5AAD</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="color-section">
+                <h3>Neutrals & Functional</h3>
+                <div class="color-grid">
+                    <div class="color-card">
+                        <div class="color-swatch" style="background: #F5F0E6;"></div>
+                        <div class="color-info">
+                            <div class="color-name">Sand</div>
+                            <div class="color-hex">#F5F0E6</div>
+                        </div>
+                    </div>
+                    <div class="color-card">
+                        <div class="color-swatch" style="background: #1F2937;"></div>
+                        <div class="color-info">
+                            <div class="color-name">Obsidian</div>
+                            <div class="color-hex">#1F2937</div>
+                        </div>
+                    </div>
+                    <div class="color-card">
+                        <div class="color-swatch" style="background: #EF4444;"></div>
+                        <div class="color-info">
+                            <div class="color-name">Recording</div>
+                            <div class="color-hex">#EF4444</div>
+                        </div>
+                    </div>
+                    <div class="color-card">
+                        <div class="color-swatch" style="background: #10B981;"></div>
+                        <div class="color-info">
+                            <div class="color-name">Success</div>
+                            <div class="color-hex">#10B981</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Typography -->
+    <section id="typography" class="section">
+        <div class="container">
+            <p class="section-label">Visual Identity</p>
+            <h2 class="section-title">Typography</h2>
+            <p class="section-intro">
+                Two typefaces work in harmony: geometric precision for navigation and UI, editorial elegance for
+                long-form content.
+            </p>
+
+            <div class="type-grid">
+                <div class="type-specimen">
+                    <p class="type-label">Display Â· Space Grotesk</p>
+                    <p class="type-sample-large type-display">Cosmic<br>Archaeology</p>
+                    <p class="type-sample-medium type-display">Building monuments out of moments</p>
+                    <p class="type-display" style="font-size: 0.875rem; color: var(--text-secondary);">
+                        ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
+                        abcdefghijklmnopqrstuvwxyz<br>
+                        0123456789
+                    </p>
+                </div>
+
+                <div class="type-specimen">
+                    <p class="type-label">Body Â· Poppins</p>
+                    <p class="type-sample-large type-body" style="font-weight: 500;">Ancient<br>Wisdom</p>
+                    <p class="type-sample-body type-body">
+                        Meetings are the ancient ruins of our daily workâ€”rich with history, full of hidden treasures,
+                        and sometimes a bit mysterious. Your words have weight and texture.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Components -->
+    <section id="components" class="section">
+        <div class="container">
+            <p class="section-label">Interface</p>
+            <h2 class="section-title">Components</h2>
+            <p class="section-intro">
+                UI elements that feel humanâ€”with the grit of a screen-print and the energy of synthwave.
+            </p>
+
+            <div class="component-showcase">
+                <p class="component-label">Buttons</p>
+                <div class="button-row">
+                    <button class="btn btn-primary">Start Recording</button>
+                    <button class="btn btn-secondary">View Transcript</button>
+                    <button class="btn btn-cosmic">Explore Archive</button>
+                </div>
+            </div>
+
+            <div class="component-showcase">
+                <p class="component-label">Recording Indicator</p>
+                <div class="recording-indicator">
+                    <div class="recording-dot"></div>
+                    <span class="recording-text">Recording</span>
+                    <span class="recording-time">12:34</span>
+                </div>
+            </div>
+
+            <div class="component-showcase">
+                <p class="component-label">Audio Visualizer</p>
+                <div class="visualizer-container">
+                    <div class="visualizer">
+                        <div class="visualizer-bar"></div>
+                        <div class="visualizer-bar"></div>
+                        <div class="visualizer-bar"></div>
+                        <div class="visualizer-bar"></div>
+                        <div class="visualizer-bar"></div>
+                        <div class="visualizer-bar"></div>
+                        <div class="visualizer-bar"></div>
+                        <div class="visualizer-bar"></div>
+                        <div class="visualizer-bar"></div>
+                        <div class="visualizer-bar"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="component-showcase">
+                <p class="component-label">Transcript Display</p>
+                <div class="transcript-card">
+                    <div class="transcript-header">
+                        <span class="transcript-title">Q4 Strategy Session</span>
+                        <span class="transcript-badge">Transcribed</span>
+                    </div>
+                    <div class="transcript-body">
+                        <div class="transcript-entry">
+                            <div class="transcript-speaker">Speaker A <span class="transcript-timestamp">00:15</span>
+                            </div>
+                            <p class="transcript-text">I think we need to focus on the cosmic archaeology of our user
+                                data. There are hidden treasures in there.</p>
+                        </div>
+                        <div class="transcript-entry">
+                            <div class="transcript-speaker">Speaker B <span class="transcript-timestamp">00:42</span>
+                            </div>
+                            <p class="transcript-text">Agreed. Let's build monuments, not just logs. The insights should
+                                shine through like gold against the void.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-tagline">"Building monuments out of moments."</p>
+            <p class="footer-meta">Seshlog Brand Book Â· v2.0 Â· January 2026</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark');
+            const icon = document.querySelector('.theme-icon');
+            icon.textContent = document.body.classList.contains('dark') ? 'â˜€ï¸' : 'ðŸŒ™';
+        }
+
+        // Default to dark mode for the cosmic aesthetic
+        document.body.classList.add('dark');
+        document.querySelector('.theme-icon').textContent = 'â˜€ï¸';
+    </script>
+</body>
+
+</html>

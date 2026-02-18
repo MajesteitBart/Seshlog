@@ -1,0 +1,219 @@
+# Section Label Configuration for Obsidian Meeting Parser
+#
+# This file defines the mapping between section field names and their
+# various labels across languages and formats.
+#
+# Structure:
+#   - field: Internal field name used in MeetingPrep struct
+#   - levels: Allowed heading levels (2 = ##, 3 = ###)
+#   - content_type: How to parse the content
+#       - bullet: Bullet list items (- item)
+#       - numbered: Numbered list (1. item)
+#       - checkbox: Checkbox items (- [ ] item)
+#       - raw: Raw markdown text
+#   - labels: Map of language code to list of alternative labels
+#
+# To add a new language:
+#   1. Add a new key under 'labels' (e.g., 'fr' for French)
+#   2. List all alternative labels users might use
+#
+# Labels are case-insensitive during matching.
+
+sections:
+  # Agenda section - meeting topics to discuss
+  - field: agenda
+    levels: [2, 3]
+    content_type: bullet  # Also accepts numbered
+    labels:
+      en:
+        - Agenda
+        - Topics
+        - Discussion Items
+        - Meeting Agenda
+      nl:
+        - Agenda
+        - Agendapunten
+        - Onderwerpen
+        - Bespreekpunten
+      de:
+        - Agenda
+        - Tagesordnung
+        - Themen
+        - Besprechungspunkte
+      fr:
+        - Agenda
+        - Ordre du jour
+        - Points à discuter
+      es:
+        - Agenda
+        - Orden del día
+        - Temas
+        - Puntos a tratar
+
+  # Notes section - meeting notes and observations
+  - field: notes
+    levels: [2, 3]
+    content_type: bullet
+    labels:
+      en:
+        - Notes
+        - Meeting Notes
+        - Discussion Notes
+        - Minutes
+      nl:
+        - Notities
+        - Notulen
+        - Aantekeningen
+        - Vergadernotities
+      de:
+        - Notizen
+        - Besprechungsnotizen
+        - Protokoll
+        - Anmerkungen
+      fr:
+        - Notes
+        - Notes de réunion
+        - Compte-rendu
+      es:
+        - Notas
+        - Notas de reunión
+        - Apuntes
+        - Minutas
+
+  # Action Items section - tasks to complete
+  - field: action_items
+    levels: [2, 3]
+    content_type: checkbox
+    labels:
+      en:
+        - Action Items
+        - Actions
+        - Tasks
+        - To Do
+        - Todo
+        - Next Steps
+        - Follow-up
+        - Follow Up
+      nl:
+        - Actiepunten
+        - Acties
+        - Taken
+        - Te doen
+        - Vervolgstappen
+        - Opvolging
+      de:
+        - Aktionspunkte
+        - Aufgaben
+        - To-Do
+        - Nächste Schritte
+        - Maßnahmen
+      fr:
+        - Actions
+        - Points d'action
+        - Tâches
+        - À faire
+        - Prochaines étapes
+      es:
+        - Acciones
+        - Tareas
+        - Pendientes
+        - Por hacer
+        - Próximos pasos
+
+  # Goals section (legacy format) - meeting objectives
+  - field: goals
+    levels: [3]  # Legacy format only uses ### level
+    content_type: checkbox
+    labels:
+      en:
+        - Goals
+        - Objectives
+        - Meeting Goals
+        - Desired Outcomes
+      nl:
+        - Doelen
+        - Doelstellingen
+        - Vergaderdoelen
+        - Gewenste resultaten
+      de:
+        - Ziele
+        - Zielsetzungen
+        - Besprechungsziele
+      fr:
+        - Objectifs
+        - Buts
+        - Résultats attendus
+      es:
+        - Objetivos
+        - Metas
+        - Resultados deseados
+
+  # Context section (legacy format) - background information
+  - field: context
+    levels: [3]  # Legacy format only uses ### level
+    content_type: raw
+    labels:
+      en:
+        - Context
+        - Background
+        - Background Information
+        - Overview
+        - Situation
+      nl:
+        - Context
+        - Achtergrond
+        - Achtergrondinformatie
+        - Situatie
+      de:
+        - Kontext
+        - Hintergrund
+        - Hintergrundinformationen
+        - Übersicht
+      fr:
+        - Contexte
+        - Contexte général
+        - Informations de base
+        - Situation
+      es:
+        - Contexto
+        - Antecedentes
+        - Información de fondo
+        - Situación
+
+# Frontmatter field aliases
+# Maps alternative YAML keys to the canonical field names
+frontmatter_aliases:
+  date:
+    - date
+    - datum        # Dutch
+    - fecha        # Spanish
+    - Datum        # German
+
+  time_start:
+    - time_start
+    - start_time
+    - start
+    - begintijd    # Dutch
+    - hora_inicio  # Spanish
+    - Startzeit    # German
+
+  time_end:
+    - time_end
+    - end_time
+    - end
+    - eindtijd     # Dutch
+    - hora_fin     # Spanish
+    - Endzeit      # German
+
+  attendees:
+    - attendees
+    - participants
+    - deelnemers   # Dutch
+    - Teilnehmer   # German
+    - participants # French
+    - asistentes   # Spanish
+
+  status:
+    - status
+    - state
+    - staat        # Dutch

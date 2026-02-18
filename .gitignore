@@ -1,0 +1,23 @@
+.DS_Store
+.idea/
+.mcp.json
+.roo
+SHORTCUTS.md
+.env
+.env.local
+.claude/settings.local.json
+.claude/logs/changes.jsonl
+**/__pycache__/
+*.pyc
+*.backup
+backend/temp.env
+
+# Repomix output files
+repomix-output.md
+repomix-output.xml
+repomix-output.json
+target/
+node_modules/
+dist/
+.temp/
+build/
