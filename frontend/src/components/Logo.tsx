@@ -20,13 +20,13 @@ const Logo = React.forwardRef<HTMLButtonElement, LogoProps>(({ isCollapsed }, re
       ) : (
         <DialogTrigger asChild>
           <span className="text-lg text-center border rounded-full bg-primary/5 border-white font-semibold text-gray-700 mb-2 block items-center cursor-pointer hover:opacity-80 transition-opacity">
-            <span>Seshlog</span>
+            <span>6log</span>
           </span>
         </DialogTrigger>
       )}
       <DialogContent>
         <VisuallyHidden>
-          <DialogTitle>About Seshlog</DialogTitle>
+          <DialogTitle>About 6log</DialogTitle>
         </VisuallyHidden>
         <About />
       </DialogContent>
